@@ -10,7 +10,38 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body id="top">
+<script>document.documentElement.classList.add('js-reveal');</script>
+
+<!-- ========== Icon Sprite（純 HTML／CSS，無需外部圖示套件） ========== -->
+<svg style="display:none" aria-hidden="true">
+  <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.5-4.5"/></symbol>
+  <symbol id="icon-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.35-9.5-8.5C1 8 2.5 5 5.5 5c2 0 3.2 1.2 4 2.3C10.3 6.2 11.5 5 13.5 5c3 0 4.5 3 3 6.5C14 15.65 12 20 12 20Z"/></symbol>
+  <symbol id="icon-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20c1.5-4 5-5.5 7.5-5.5s6 1.5 7.5 5.5"/></symbol>
+  <symbol id="icon-cart" viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+
+  <symbol id="icon-droplet" viewBox="0 0 24 24"><path d="M12 3C12 3 6 10.5 6 15a6 6 0 0 0 12 0C18 10.5 12 3 12 3Z"/></symbol>
+  <symbol id="icon-bottle" viewBox="0 0 24 24"><rect x="8" y="10" width="8" height="11" rx="1.5"/><rect x="10" y="5" width="4" height="5" rx="1"/><line x1="12" y1="3" x2="12" y2="5"/></symbol>
+  <symbol id="icon-lipstick" viewBox="0 0 24 24"><path d="M9 3h6v5l-1 2h-4l-1-2V3Z"/><rect x="9" y="10" width="6" height="11" rx="1"/></symbol>
+  <symbol id="icon-capsule" viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="6" rx="3" transform="rotate(-25 12 12)"/><line x1="12" y1="8" x2="12" y2="16" transform="rotate(-25 12 12)"/></symbol>
+  <symbol id="icon-flower" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.3"/><circle cx="12" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="12" r="3"/></symbol>
+  <symbol id="icon-gift" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="1"/><rect x="4" y="7" width="16" height="4" rx="1"/><line x1="12" y1="7" x2="12" y2="20"/><path d="M12 7C12 7 9 3 7 5c-2 2 1 2 5 2Z"/><path d="M12 7C12 7 15 3 17 5c2 2-1 2-5 2Z"/></symbol>
+
+  <symbol id="icon-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5"/><path d="M9 13l-2 8 5-3 5 3-2-8"/></symbol>
+  <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="icon-truck" viewBox="0 0 24 24"><rect x="2" y="8" width="12" height="8" rx="1"/><path d="M14 11h4l3 3v2h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></symbol>
+  <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5Z"/></symbol>
+
+  <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M5 4h3l2 5-2 1a12 12 0 0 0 6 6l1-2 5 2v3c0 1-1 2-2 2C11 21 3 13 3 6c0-1 1-2 2-2Z"/></symbol>
+  <symbol id="icon-printer" viewBox="0 0 24 24"><rect x="5" y="9" width="14" height="7" rx="1"/><path d="M7 9V4h10v5"/><path d="M7 16v4h10v-4"/></symbol>
+  <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+  <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></symbol>
+  <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6l9 7 9-7"/></symbol>
+
+  <symbol id="icon-home" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></symbol>
+  <symbol id="icon-star" viewBox="0 0 24 24"><path d="M12 3l2.5 6.3 6.5.6-5 4.4 1.5 6.4L12 17.3 6.5 20.7 8 14.3l-5-4.4 6.5-.6L12 3Z"/></symbol>
+  <symbol id="icon-clipboard" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><path d="M8 11h8M8 15h5"/></symbol>
+</svg>
 
 <!-- ========== 頂部提示列 ========== -->
 <div class="topbar">
@@ -39,19 +70,19 @@
     <form class="search-form" action="#" method="get" role="search">
       <input type="search" name="q" placeholder="搜尋商品，例如：面膜、精華、眼膜…" aria-label="搜尋商品">
       <button type="submit" aria-label="搜尋">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.5-4.5"/></svg>
+        <svg class="icon"><use href="#icon-search"/></svg>
       </button>
     </form>
 
     <div class="header-icons">
       <a href="#" class="header-icons__item" aria-label="願望清單">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20s-7-4.35-9.5-8.5C1 8 2.5 5 5.5 5c2 0 3.2 1.2 4 2.3C10.3 6.2 11.5 5 13.5 5c3 0 4.5 3 3 6.5C14 15.65 12 20 12 20Z"/></svg>
+        <svg class="icon"><use href="#icon-heart"/></svg>
       </a>
       <a href="#" class="header-icons__item" aria-label="會員中心">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20c1.5-4 5-5.5 7.5-5.5s6 1.5 7.5 5.5"/></svg>
+        <svg class="icon"><use href="#icon-user"/></svg>
       </a>
       <a href="#" class="header-icons__item header-icons__item--cart" aria-label="購物車">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <svg class="icon"><use href="#icon-cart"/></svg>
         <span class="cart-badge">0</span>
       </a>
     </div>
@@ -64,12 +95,12 @@
   <!-- ========== 主選單 ========== -->
   <nav class="main-nav">
     <ul class="main-nav__list">
-      <li><a href="#">首頁</a></li>
-      <li><a href="#">新品推薦</a></li>
+      <li><a href="#top"><svg class="icon icon--nav"><use href="#icon-home"/></svg>首頁</a></li>
+      <li><a href="#latest-products"><svg class="icon icon--nav"><use href="#icon-star"/></svg>新品推薦</a></li>
 
       <li>
         <details>
-          <summary>保養</summary>
+          <summary><svg class="icon icon--nav"><use href="#icon-droplet"/></svg>保養</summary>
           <div class="dropdown dropdown--mega">
             <div class="dropdown__col">
               <h4>基礎保養</h4>
@@ -100,7 +131,7 @@
 
       <li>
         <details>
-          <summary>彩妝</summary>
+          <summary><svg class="icon icon--nav"><use href="#icon-lipstick"/></svg>彩妝</summary>
           <div class="dropdown">
             <ul>
               <li><a href="#">臉部彩妝</a></li>
@@ -114,7 +145,7 @@
 
       <li>
         <details>
-          <summary>膠囊系列</summary>
+          <summary><svg class="icon icon--nav"><use href="#icon-capsule"/></svg>膠囊系列</summary>
           <div class="dropdown">
             <ul>
               <li><a href="#">保養膠囊</a></li>
@@ -127,7 +158,7 @@
 
       <li>
         <details>
-          <summary>香氛＆放鬆保養</summary>
+          <summary><svg class="icon icon--nav"><use href="#icon-flower"/></svg>香氛＆放鬆保養</summary>
           <div class="dropdown">
             <ul>
               <li><a href="#">精油</a></li>
@@ -140,7 +171,7 @@
 
       <li>
         <details>
-          <summary>套裝／活動組合</summary>
+          <summary><svg class="icon icon--nav"><use href="#icon-gift"/></svg>套裝／活動組合</summary>
           <div class="dropdown">
             <ul>
               <li><a href="#">限定組合</a></li>
@@ -153,7 +184,7 @@
 
       <li>
         <details>
-          <summary>推薦清單</summary>
+          <summary><svg class="icon icon--nav"><use href="#icon-clipboard"/></svg>推薦清單</summary>
           <div class="dropdown">
             <ul>
               <li><a href="#">乾燥肌</a></li>
@@ -194,32 +225,32 @@
   </section>
 
   <!-- ========== 分類快捷區 ========== -->
-  <section class="categories">
+  <section class="categories reveal">
     <div class="container">
       <h2 class="section-title">選購分類</h2>
       <div class="categories__grid">
         <a href="#" class="category-card">
-          <span class="category-card__icon">🧴</span>
+          <span class="category-card__icon"><svg class="icon"><use href="#icon-droplet"/></svg></span>
           <span class="category-card__name">面膜系列</span>
         </a>
         <a href="#" class="category-card">
-          <span class="category-card__icon">🌿</span>
+          <span class="category-card__icon"><svg class="icon"><use href="#icon-bottle"/></svg></span>
           <span class="category-card__name">基礎保養</span>
         </a>
         <a href="#" class="category-card">
-          <span class="category-card__icon">💄</span>
+          <span class="category-card__icon"><svg class="icon"><use href="#icon-lipstick"/></svg></span>
           <span class="category-card__name">彩妝</span>
         </a>
         <a href="#" class="category-card">
-          <span class="category-card__icon">💊</span>
+          <span class="category-card__icon"><svg class="icon"><use href="#icon-capsule"/></svg></span>
           <span class="category-card__name">膠囊系列</span>
         </a>
         <a href="#" class="category-card">
-          <span class="category-card__icon">🕯️</span>
+          <span class="category-card__icon"><svg class="icon"><use href="#icon-flower"/></svg></span>
           <span class="category-card__name">香氛放鬆保養</span>
         </a>
         <a href="#" class="category-card">
-          <span class="category-card__icon">🎁</span>
+          <span class="category-card__icon"><svg class="icon"><use href="#icon-gift"/></svg></span>
           <span class="category-card__name">套裝活動組合</span>
         </a>
       </div>
@@ -227,7 +258,7 @@
   </section>
 
   <!-- ========== 促銷橫幅 ========== -->
-  <section class="promo-banner">
+  <section class="promo-banner reveal">
     <div class="container promo-banner__grid">
       <div class="promo-banner__block promo-banner__block--primary">
         <h3>寶雅線上購專區</h3>
@@ -243,7 +274,7 @@
   </section>
 
   <!-- ========== 最新商品 ========== -->
-  <section class="latest-products" id="latest-products">
+  <section class="latest-products reveal" id="latest-products">
     <div class="container">
       <div class="section-head">
         <h2 class="section-title">新品上市</h2>
@@ -252,62 +283,62 @@
       <div class="product-grid">
 
         <article class="product-card">
-          <a href="#" class="product-card__image"><span>商品圖片</span></a>
-          <h3 class="product-card__name"><a href="#">SBIR典藏台南肌秘面膜禮盒</a></h3>
+          <a href="https://www.elg.com.tw/product/product&product_id=555" class="product-card__image"><img src="https://image-cdn-flare.qdm.cloud/q60d4bf275a1cc/image/data/2026/08/12/fcc77a7ac07821d30dd8f21a1b28eb00.jpg" alt="SBIR典藏台南肌秘面膜禮盒" loading="lazy"></a>
+          <h3 class="product-card__name"><a href="https://www.elg.com.tw/product/product&product_id=555">SBIR典藏台南肌秘面膜禮盒</a></h3>
           <p class="product-card__price">NT$2,000</p>
         </article>
 
         <article class="product-card">
-          <a href="#" class="product-card__image"><span>商品圖片</span></a>
-          <h3 class="product-card__name"><a href="#">【依洛嘉 E.L.G】美肌之盾光感無瑕底妝液/35g</a></h3>
+          <a href="https://www.elg.com.tw/product/product&product_id=554" class="product-card__image"><img src="https://image-cdn-flare.qdm.cloud/q60d4bf275a1cc/image/data/2026/04/28/606f3600c4ce327df1cfcaf1ed6e28af.jpg" alt="美肌之盾光感無瑕底妝液/35g" loading="lazy"></a>
+          <h3 class="product-card__name"><a href="https://www.elg.com.tw/product/product&product_id=554">【依洛嘉 E.L.G】美肌之盾光感無瑕底妝液/35g</a></h3>
           <p class="product-card__price">NT$900</p>
         </article>
 
         <article class="product-card">
-          <a href="#" class="product-card__image"><span>商品圖片</span></a>
-          <h3 class="product-card__name"><a href="#">【依洛嘉E.L.G】植物烏髮養護精華乳50g</a></h3>
+          <a href="https://www.elg.com.tw/product/product&product_id=553" class="product-card__image"><img src="https://image-cdn-flare.qdm.cloud/q60d4bf275a1cc/image/data/2026/04/28/3052a64991949510f042306fa82e51c2.jpg" alt="植物烏髮養護精華乳50g" loading="lazy"></a>
+          <h3 class="product-card__name"><a href="https://www.elg.com.tw/product/product&product_id=553">【依洛嘉E.L.G】植物烏髮養護精華乳50g</a></h3>
           <p class="product-card__price">NT$980</p>
         </article>
 
         <article class="product-card">
-          <a href="#" class="product-card__image"><span>商品圖片</span></a>
-          <h3 class="product-card__name"><a href="#">【依洛嘉 E.L.G】山芙蓉舒緩修護化妝水100ml</a></h3>
+          <a href="https://www.elg.com.tw/product/product&product_id=538" class="product-card__image"><img src="https://image-cdn-flare.qdm.cloud/q60d4bf275a1cc/image/data/2026/01/27/4c4c591253d99a18fc9a465493f502f8.jpg" alt="山芙蓉舒緩修護化妝水100ml" loading="lazy"></a>
+          <h3 class="product-card__name"><a href="https://www.elg.com.tw/product/product&product_id=538">【依洛嘉 E.L.G】山芙蓉舒緩修護化妝水100ml</a></h3>
           <p class="product-card__price">NT$399</p>
         </article>
 
         <article class="product-card">
-          <a href="#" class="product-card__image"><span>商品圖片</span></a>
-          <h3 class="product-card__name"><a href="#">【依洛嘉 E.L.G】私密抑菌潔淨慕斯100ml</a></h3>
+          <a href="https://www.elg.com.tw/product/product&product_id=525" class="product-card__image"><img src="https://image-cdn-flare.qdm.cloud/q60d4bf275a1cc/image/data/2025/05/20/b58ea72226b9b48c15e89fd778128f4a.jpg" alt="私密抑菌潔淨慕斯100ml" loading="lazy"></a>
+          <h3 class="product-card__name"><a href="https://www.elg.com.tw/product/product&product_id=525">【依洛嘉 E.L.G】私密抑菌潔淨慕斯100ml</a></h3>
           <p class="product-card__price">NT$699</p>
         </article>
 
         <article class="product-card">
-          <a href="#" class="product-card__image"><span>商品圖片</span></a>
-          <h3 class="product-card__name"><a href="#">【依洛嘉 E.L.G】私密抑菌清爽噴霧60ml</a></h3>
+          <a href="https://www.elg.com.tw/product/product&product_id=524" class="product-card__image"><img src="https://image-cdn-flare.qdm.cloud/q60d4bf275a1cc/image/data/2025/05/20/4855a33d7b0e892838490687725a8e4c.jpg" alt="私密抑菌清爽噴霧60ml" loading="lazy"></a>
+          <h3 class="product-card__name"><a href="https://www.elg.com.tw/product/product&product_id=524">【依洛嘉 E.L.G】私密抑菌清爽噴霧60ml</a></h3>
           <p class="product-card__price">NT$699</p>
         </article>
 
         <article class="product-card">
-          <a href="#" class="product-card__image"><span>商品圖片</span></a>
-          <h3 class="product-card__name"><a href="#">【依洛嘉 E.L.G】水潤保濕肽精華/30ml</a></h3>
+          <a href="https://www.elg.com.tw/product/product&product_id=523" class="product-card__image"><img src="https://image-cdn-flare.qdm.cloud/q60d4bf275a1cc/image/data/2025/04/08/d5451b0024b3df278fde8b4e6686526b.jpg" alt="水潤保濕肽精華/30ml" loading="lazy"></a>
+          <h3 class="product-card__name"><a href="https://www.elg.com.tw/product/product&product_id=523">【依洛嘉 E.L.G】水潤保濕肽精華/30ml</a></h3>
           <p class="product-card__price">NT$1,980</p>
         </article>
 
         <article class="product-card">
-          <a href="#" class="product-card__image"><span>商品圖片</span></a>
-          <h3 class="product-card__name"><a href="#">【依洛嘉 E.L.G】舒敏修護肽精華/30ml</a></h3>
+          <a href="https://www.elg.com.tw/product/product&product_id=522" class="product-card__image"><img src="https://image-cdn-flare.qdm.cloud/q60d4bf275a1cc/image/data/2025/04/08/22f7fd78ea01471e96d19699c0f95e10.jpg" alt="舒敏修護肽精華/30ml" loading="lazy"></a>
+          <h3 class="product-card__name"><a href="https://www.elg.com.tw/product/product&product_id=522">【依洛嘉 E.L.G】舒敏修護肽精華/30ml</a></h3>
           <p class="product-card__price">NT$1,980</p>
         </article>
 
         <article class="product-card">
-          <a href="#" class="product-card__image"><span>商品圖片</span></a>
-          <h3 class="product-card__name"><a href="#">【依洛嘉 E.L.G】煥采透亮肽精華/30ml</a></h3>
+          <a href="https://www.elg.com.tw/product/product&product_id=521" class="product-card__image"><img src="https://image-cdn-flare.qdm.cloud/q60d4bf275a1cc/image/data/2025/04/08/4435614ccd07db402c214c17060a0938.jpg" alt="煥采透亮肽精華/30ml" loading="lazy"></a>
+          <h3 class="product-card__name"><a href="https://www.elg.com.tw/product/product&product_id=521">【依洛嘉 E.L.G】煥采透亮肽精華/30ml</a></h3>
           <p class="product-card__price">NT$1,980</p>
         </article>
 
         <article class="product-card">
-          <a href="#" class="product-card__image"><span>商品圖片</span></a>
-          <h3 class="product-card__name"><a href="#">【依洛嘉 E.L.G】緊顏抗老肽精華/30ml</a></h3>
+          <a href="https://www.elg.com.tw/product/product&product_id=520" class="product-card__image"><img src="https://image-cdn-flare.qdm.cloud/q60d4bf275a1cc/image/data/2025/04/08/d6cd714fe09d6808e0acf91c6c72cbec.jpg" alt="緊顏抗老肽精華/30ml" loading="lazy"></a>
+          <h3 class="product-card__name"><a href="https://www.elg.com.tw/product/product&product_id=520">【依洛嘉 E.L.G】緊顏抗老肽精華/30ml</a></h3>
           <p class="product-card__price">NT$1,980</p>
         </article>
 
@@ -316,25 +347,25 @@
   </section>
 
   <!-- ========== 品牌信任區 ========== -->
-  <section class="trust">
+  <section class="trust reveal">
     <div class="container trust__grid">
       <div class="trust__item">
-        <span class="trust__icon">🏅</span>
+        <span class="trust__icon"><svg class="icon"><use href="#icon-award"/></svg></span>
         <h3>SINCE 2004</h3>
         <p>二十年保養品牌經驗</p>
       </div>
       <div class="trust__item">
-        <span class="trust__icon">✔️</span>
+        <span class="trust__icon"><svg class="icon"><use href="#icon-shield"/></svg></span>
         <h3>正貨保證</h3>
         <p>100% 台灣自製正貨</p>
       </div>
       <div class="trust__item">
-        <span class="trust__icon">🚚</span>
+        <span class="trust__icon"><svg class="icon"><use href="#icon-truck"/></svg></span>
         <h3>快速出貨</h3>
         <p>訂單出貨快速又安心</p>
       </div>
       <div class="trust__item">
-        <span class="trust__icon">💬</span>
+        <span class="trust__icon"><svg class="icon"><use href="#icon-chat"/></svg></span>
         <h3>客服保障</h3>
         <p>line／FB 即時為您服務</p>
       </div>
@@ -342,7 +373,7 @@
   </section>
 
   <!-- ========== 社群連結 ========== -->
-  <section class="social">
+  <section class="social reveal">
     <div class="container">
       <h2 class="section-title">追蹤我們</h2>
       <div class="social__grid">
@@ -375,26 +406,26 @@
     <div class="site-footer__col">
       <h4>依洛嘉國際實業有限公司</h4>
       <p>統一編號：53796463</p>
-      <p>營業時間：週一至週五上午 09:00－下午 05:00</p>
-      <p>服務地址：台南市佳里區佳興里宅興二街600號</p>
-      <p>客服電話：(06)7266551</p>
-      <p>傳真電話：(06)7263656</p>
-      <p>Email：<a href="mailto:sunnyelg1118@gmail.com">sunnyelg1118@gmail.com</a></p>
+      <p><svg class="icon icon--sm"><use href="#icon-clock"/></svg>營業時間：週一至週五上午 09:00－下午 05:00</p>
+      <p><svg class="icon icon--sm"><use href="#icon-pin"/></svg>服務地址：台南市佳里區佳興里宅興二街600號</p>
+      <p><svg class="icon icon--sm"><use href="#icon-phone"/></svg>客服電話：(06)7266551</p>
+      <p><svg class="icon icon--sm"><use href="#icon-printer"/></svg>傳真電話：(06)7263656</p>
+      <p><svg class="icon icon--sm"><use href="#icon-mail"/></svg>Email：<a href="mailto:sunnyelg1118@gmail.com">sunnyelg1118@gmail.com</a></p>
     </div>
 
     <div class="site-footer__col">
       <h4>顧客服務</h4>
-      <p><a href="https://www.elg.com.tw/contact">線上留言</a></p>
-      <p><a href="mailto:sunnyelg1118@gmail.com">電子郵件客服</a></p>
-      <p><a href="https://line.naver.jp/ti/p/~@def6392t">官方 LINE：@def6392t</a></p>
-      <p><a href="https://www.messenger.com/t/elgshop">Facebook 訊息</a></p>
+      <p><a href="https://www.elg.com.tw/contact"><svg class="icon icon--sm"><use href="#icon-chat"/></svg>線上留言</a></p>
+      <p><a href="mailto:sunnyelg1118@gmail.com"><svg class="icon icon--sm"><use href="#icon-mail"/></svg>電子郵件客服</a></p>
+      <p><a href="https://line.naver.jp/ti/p/~@def6392t"><svg class="icon icon--sm"><use href="#icon-chat"/></svg>官方 LINE：@def6392t</a></p>
+      <p><a href="https://www.messenger.com/t/elgshop"><svg class="icon icon--sm"><use href="#icon-chat"/></svg>Facebook 訊息</a></p>
     </div>
 
     <div class="site-footer__col">
       <h4>社群媒體</h4>
-      <p><a href="https://www.facebook.com/elgshop">官方 FB：E.L.G依洛嘉</a></p>
-      <p><a href="https://www.instagram.com/e.l.g_mask_taiwan/">官方 IG：e.l.g_mask_taiwan</a></p>
-      <p><a href="https://www.youtube.com/channel/UCHavmgJFWc-RgWnPcysogzw">官方 YouTube：E.L.G依洛嘉國際</a></p>
+      <p><a href="https://www.facebook.com/elgshop"><img class="footer-social-icon" src="https://image-cdn-flare.qdm.cloud/q60d4bf275a1cc/image/data/2021/09/24/37810461f75e41aa3a1277929921a789.jpg" alt="">官方 FB：E.L.G依洛嘉</a></p>
+      <p><a href="https://www.instagram.com/e.l.g_mask_taiwan/"><img class="footer-social-icon" src="https://image-cdn-flare.qdm.cloud/q60d4bf275a1cc/image/data/2021/09/24/e2612e3e4bf69b62ef48c8296b8240cc.jpg" alt="">官方 IG：e.l.g_mask_taiwan</a></p>
+      <p><a href="https://www.youtube.com/channel/UCHavmgJFWc-RgWnPcysogzw"><img class="footer-social-icon" src="https://image-cdn-flare.qdm.cloud/q60d4bf275a1cc/image/data/2021/09/24/5ffafa16a5ea81bb3bed4cd703a81ddb.jpg" alt="">官方 YouTube：E.L.G依洛嘉國際</a></p>
     </div>
 
   </div>
@@ -403,6 +434,26 @@
     <p>SINCE 2004 &copy; by ELG Taiwan</p>
   </div>
 </footer>
+
+<script>
+(function () {
+  var targets = document.querySelectorAll('.reveal');
+  if (!targets.length) return;
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach(function (el) { el.classList.add('is-visible'); });
+    return;
+  }
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  targets.forEach(function (el) { observer.observe(el); });
+})();
+</script>
 
 </body>
 </html>
