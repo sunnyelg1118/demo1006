@@ -1,5 +1,5 @@
 $root = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
-$port = 5500
+$port = 8923
 $listener = New-Object System.Net.HttpListener
 $listener.Prefixes.Add("http://localhost:$port/")
 $listener.Start()
@@ -15,6 +15,7 @@ $mime = @{
   ".jpeg" = "image/jpeg"
   ".svg"  = "image/svg+xml"
   ".ico"  = "image/x-icon"
+  ".pdf"  = "application/pdf"
 }
 
 while ($listener.IsListening) {
@@ -22,7 +23,7 @@ while ($listener.IsListening) {
   $req = $context.Request
   $res = $context.Response
   try {
-    $path = $req.Url.AbsolutePath
+    $path = [uri]::UnescapeDataString($req.Url.AbsolutePath)
     if ($path -eq "/") { $path = "/index.html" }
     $filePath = Join-Path $root ($path.TrimStart("/") -replace "/", "\")
     if (Test-Path $filePath -PathType Leaf) {
@@ -39,6 +40,7 @@ while ($listener.IsListening) {
       $res.OutputStream.Write($notFound, 0, $notFound.Length)
     }
   } catch {
+    Write-Host "ERROR for $($req.Url.AbsolutePath): $($_.Exception.Message)"
     $res.StatusCode = 500
   } finally {
     $res.OutputStream.Close()
