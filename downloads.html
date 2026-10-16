@@ -44,6 +44,24 @@
 
   <symbol id="icon-file" viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7V3Z"/><path d="M14 3v5h5"/></symbol>
   <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 19h14"/></symbol>
+
+  <defs>
+    <linearGradient id="pdfRibbon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E08A5B"/>
+      <stop offset="100%" stop-color="#B5543A"/>
+    </linearGradient>
+    <linearGradient id="pdfPage" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F2ECE2"/>
+    </linearGradient>
+  </defs>
+  <symbol id="icon-pdf" viewBox="0 0 40 50">
+    <path d="M8 2H28L34 8V48H8V2Z" fill="url(#pdfPage)" stroke="#DCD3C3" stroke-width="1"/>
+    <path d="M28 2L34 8H28V2Z" fill="#ECE4D8" stroke="#DCD3C3" stroke-width="1" stroke-linejoin="round"/>
+    <rect x="1" y="30" width="38" height="13" rx="1.5" fill="url(#pdfRibbon)"/>
+    <path d="M1 31.3L39 29.8V32.3L1 33.8Z" fill="#FFFFFF" opacity="0.2"/>
+    <text x="20" y="39.5" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">PDF</text>
+  </symbol>
 </svg>
 
 <!-- ========== 頂部提示列 ========== -->
@@ -223,7 +241,7 @@
 
         <li class="download-item">
           <a href="files/%E5%8E%9F%E6%96%99/01.%E8%A7%86%E9%BB%84%E9%86%87MSDS.pdf" download>
-            <svg class="icon"><use href="#icon-file"/></svg>
+            <svg class="icon--pdf"><use href="#icon-pdf"/></svg>
             <span class="download-item__name">01.视黄醇MSDS.pdf</span>
             <span class="download-item__size">415 KB</span>
             <svg class="icon icon--sm-download"><use href="#icon-download"/></svg>
@@ -232,7 +250,7 @@
 
         <li class="download-item">
           <a href="files/%E5%8E%9F%E6%96%99/02.%E8%A7%86%E9%BB%84%E9%86%87COA.pdf" download>
-            <svg class="icon"><use href="#icon-file"/></svg>
+            <svg class="icon--pdf"><use href="#icon-pdf"/></svg>
             <span class="download-item__name">02.视黄醇COA.pdf</span>
             <span class="download-item__size">114 KB</span>
             <svg class="icon icon--sm-download"><use href="#icon-download"/></svg>
@@ -241,7 +259,7 @@
 
         <li class="download-item">
           <a href="files/%E5%8E%9F%E6%96%99/03.MSDS-%E8%B6%85%E5%88%86%E5%AD%90%E6%B0%B4%E6%9D%A8%E9%85%B8.pdf" download>
-            <svg class="icon"><use href="#icon-file"/></svg>
+            <svg class="icon--pdf"><use href="#icon-pdf"/></svg>
             <span class="download-item__name">03.MSDS-超分子水杨酸.pdf</span>
             <span class="download-item__size">290 KB</span>
             <svg class="icon icon--sm-download"><use href="#icon-download"/></svg>
@@ -250,7 +268,7 @@
 
         <li class="download-item">
           <a href="files/%E5%8E%9F%E6%96%99/04.40%25%E6%B0%B4%E6%BA%B6%E6%B0%B4%E6%9D%A8%E9%85%B8%20coa.pdf" download>
-            <svg class="icon"><use href="#icon-file"/></svg>
+            <svg class="icon--pdf"><use href="#icon-pdf"/></svg>
             <span class="download-item__name">04.40%水溶水杨酸 coa.pdf</span>
             <span class="download-item__size">156 KB</span>
             <svg class="icon icon--sm-download"><use href="#icon-download"/></svg>
@@ -259,7 +277,7 @@
 
         <li class="download-item">
           <a href="files/%E5%8E%9F%E6%96%99/05.%E6%B0%B4%E6%BA%B6%E8%96%84%E8%8D%B7%E9%86%87-MSDS%EF%BC%88%E5%90%AB%E6%AF%94%E4%BE%8B%EF%BC%89.pdf" download>
-            <svg class="icon"><use href="#icon-file"/></svg>
+            <svg class="icon--pdf"><use href="#icon-pdf"/></svg>
             <span class="download-item__name">05.水溶薄荷醇-MSDS（含比例）.pdf</span>
             <span class="download-item__size">210 KB</span>
             <svg class="icon icon--sm-download"><use href="#icon-download"/></svg>
@@ -268,7 +286,7 @@
 
         <li class="download-item">
           <a href="files/%E5%8E%9F%E6%96%99/06.%E6%B0%B4%E6%BA%B6%E8%96%84%E8%8D%B7%E9%86%87COA.pdf" download>
-            <svg class="icon"><use href="#icon-file"/></svg>
+            <svg class="icon--pdf"><use href="#icon-pdf"/></svg>
             <span class="download-item__name">06.水溶薄荷醇COA.pdf</span>
             <span class="download-item__size">218 KB</span>
             <svg class="icon icon--sm-download"><use href="#icon-download"/></svg>
@@ -277,7 +295,7 @@
 
         <li class="download-item">
           <a href="files/%E5%8E%9F%E6%96%99/07.MSDS%E8%9C%82%E8%83%B6%E6%8F%90%E5%8F%96%E6%B6%B2.pdf" download>
-            <svg class="icon"><use href="#icon-file"/></svg>
+            <svg class="icon--pdf"><use href="#icon-pdf"/></svg>
             <span class="download-item__name">07.MSDS蜂胶提取液.pdf</span>
             <span class="download-item__size">385 KB</span>
             <svg class="icon icon--sm-download"><use href="#icon-download"/></svg>
@@ -286,7 +304,7 @@
 
         <li class="download-item">
           <a href="files/%E5%8E%9F%E6%96%99/08.%E8%9C%82%E8%83%B6%E6%8F%90%E5%8F%96%E7%89%A9.pdf" download>
-            <svg class="icon"><use href="#icon-file"/></svg>
+            <svg class="icon--pdf"><use href="#icon-pdf"/></svg>
             <span class="download-item__name">08.蜂胶提取物.pdf</span>
             <span class="download-item__size">133 KB</span>
             <svg class="icon icon--sm-download"><use href="#icon-download"/></svg>
@@ -295,7 +313,7 @@
 
         <li class="download-item">
           <a href="files/%E5%8E%9F%E6%96%99/09.MSDS%E8%9C%82%E8%9C%9C%E6%8F%90%E5%8F%96%E6%B6%B2%20.pdf" download>
-            <svg class="icon"><use href="#icon-file"/></svg>
+            <svg class="icon--pdf"><use href="#icon-pdf"/></svg>
             <span class="download-item__name">09.MSDS蜂蜜提取液.pdf</span>
             <span class="download-item__size">363 KB</span>
             <svg class="icon icon--sm-download"><use href="#icon-download"/></svg>
@@ -304,7 +322,7 @@
 
         <li class="download-item">
           <a href="files/%E5%8E%9F%E6%96%99/10.%E8%9C%82%E8%9C%9C%E6%8F%90%E5%8F%96%E7%89%A9.pdf" download>
-            <svg class="icon"><use href="#icon-file"/></svg>
+            <svg class="icon--pdf"><use href="#icon-pdf"/></svg>
             <span class="download-item__name">10.蜂蜜提取物.pdf</span>
             <span class="download-item__size">133 KB</span>
             <svg class="icon icon--sm-download"><use href="#icon-download"/></svg>
@@ -313,7 +331,7 @@
 
         <li class="download-item">
           <a href="files/%E5%8E%9F%E6%96%99/11.%E9%BB%91%E6%B3%A5%20%E6%89%B9%E5%8F%B720250301(2)(1).pdf" download>
-            <svg class="icon"><use href="#icon-file"/></svg>
+            <svg class="icon--pdf"><use href="#icon-pdf"/></svg>
             <span class="download-item__name">11.黑泥 批号20250301(2)(1).pdf</span>
             <span class="download-item__size">72 KB</span>
             <svg class="icon icon--sm-download"><use href="#icon-download"/></svg>

@@ -758,6 +758,15 @@ html.js-reveal .reveal.is-visible {
 }
 .download-item a:hover .icon--sm-download { color: var(--color-primary); }
 
+.icon--pdf {
+  width: 27px;
+  height: 34px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 3px rgba(70,62,55,0.18));
+  transition: transform .25s ease;
+}
+.download-item a:hover .icon--pdf { transform: translateY(-2px) scale(1.04); }
+
 /* ========================================================
    RWD：平板
    ======================================================== */

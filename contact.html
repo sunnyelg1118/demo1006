@@ -41,6 +41,24 @@
   <symbol id="icon-home" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></symbol>
   <symbol id="icon-star" viewBox="0 0 24 24"><path d="M12 3l2.5 6.3 6.5.6-5 4.4 1.5 6.4L12 17.3 6.5 20.7 8 14.3l-5-4.4 6.5-.6L12 3Z"/></symbol>
   <symbol id="icon-clipboard" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><path d="M8 11h8M8 15h5"/></symbol>
+
+  <defs>
+    <linearGradient id="pdfRibbon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E08A5B"/>
+      <stop offset="100%" stop-color="#B5543A"/>
+    </linearGradient>
+    <linearGradient id="pdfPage" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F2ECE2"/>
+    </linearGradient>
+  </defs>
+  <symbol id="icon-pdf" viewBox="0 0 40 50">
+    <path d="M8 2H28L34 8V48H8V2Z" fill="url(#pdfPage)" stroke="#DCD3C3" stroke-width="1"/>
+    <path d="M28 2L34 8H28V2Z" fill="#ECE4D8" stroke="#DCD3C3" stroke-width="1" stroke-linejoin="round"/>
+    <rect x="1" y="30" width="38" height="13" rx="1.5" fill="url(#pdfRibbon)"/>
+    <path d="M1 31.3L39 29.8V32.3L1 33.8Z" fill="#FFFFFF" opacity="0.2"/>
+    <text x="20" y="39.5" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">PDF</text>
+  </symbol>
 </svg>
 
 <!-- ========== 頂部提示列 ========== -->
